@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form_register {
+    width: 500px;
+    background-color: #282b39;
+    padding: 30px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+}
+
+#titulo {
+    margin: auto;
+    color: rgb(0, 0, 0);
+}
+
+#subtitulo {
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls {
+    width: 100%;
+    background-color: #282b39;
+    padding:2px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    border:1px solid #ffffff;
+    color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sendbutton {
+    width: 60%;
+    color: white;
+    text-align: center;
+    background: #2493F5;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    margin-left: 85px;
+    padding: 7px;
+}
+
+body{
+    background-image: url("img/background.jpg");
+}
