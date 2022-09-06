@@ -15,6 +15,17 @@
     color: #ffffff;
 }
 
+.form-register {
+    width: 500px;
+    background: #14151d;
+    padding: 50px;
+    margin: auto;
+    margin-top: 120px;
+    border-radius: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #7e7e7e;
+}
+
 #titulo {
     margin: auto;
     color: rgb(0, 0, 0);
