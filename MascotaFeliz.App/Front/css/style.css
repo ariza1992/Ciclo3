@@ -4,6 +4,55 @@
     box-sizing: border-box;
 }
 
+.nav{
+    
+    margin:auto;
+				width:340px;
+				font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#282b39;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+                border:1px solid #434343;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			
+}
+
 .form_register {
     width: 500px;
     background-color: #282b39;
