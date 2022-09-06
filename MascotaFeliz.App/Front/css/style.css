@@ -9,6 +9,7 @@
     margin:auto;
 				width:340px;
 				font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                
 			}
 			
 			ul, ol {
@@ -25,6 +26,7 @@
 				text-decoration:none;
 				padding:10px 12px;
 				display:block;
+                border:1px solid #434343;
 			}
 			
 			.nav li a:hover {
