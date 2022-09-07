@@ -11,8 +11,8 @@ body{
 .nav{
     
     margin:auto;
-				width:486px;
-				font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+				width:490px;
+				font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 padding: 0px;
                 margin: auto;
                 margin-top: 30px;
@@ -29,7 +29,7 @@ body{
 			}
 			
 			.nav li a {
-				background-color:#282b39;
+				background-color:#434343;
 				color:#fff;
 				text-decoration:none;
 				padding:10px 12px;
@@ -61,6 +61,18 @@ body{
 			
 }
 
+p.cien {font-weight: 100;}
+p {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+h1 {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+h2 {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+.inicio {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f7f5f5;
+    
+}
+
+
 .form_register {
     width: 500px;
     background-color: #282b39;
@@ -68,7 +80,7 @@ body{
     margin: auto;
     margin-top: 30px;
     border-radius: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
 }
 
@@ -79,7 +91,7 @@ body{
     margin: auto;
     margin-top: 120px;
     border-radius: 50px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #7e7e7e;
 }
 
@@ -104,7 +116,7 @@ body{
     font-size: 16px;
     border:1px solid #ffffff;
     color: #ffffff;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .sendbutton {
@@ -112,7 +124,7 @@ body{
     color: white;
     text-align: center;
     background: #2493F5;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 17px;
     margin-left: 85px;
     padding: 7px;
@@ -120,7 +132,7 @@ body{
 }
 
 .combobox {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #282b39;
     border:1px solid #ffffff;
     border-radius: 4px;
