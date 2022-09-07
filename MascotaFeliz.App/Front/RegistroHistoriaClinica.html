@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Registro Mascota</title>
+    <title>Registro Historia Clinica</title>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
 
     <section class="form_register">
         <form action="/action_page.php">
-            <p id="subtitulo">Registro de Nueva Mascota</p>
+            <p id="subtitulo">Registro de Historia Clinica</p>
 
             <label for="RegistroNombreMascota">Nombre:</label><br>
             <input class="controls" type="text" id="RegistroNombreMascota" name="RegistroNombreMascota" value="" placeholder="Ingrese el nombre de la Mascota"><br><br>
@@ -76,6 +76,9 @@
 
             <label for="RegistroPropietarioMascota">Propietario:</label><br>
             <input class="controls" type="text" id="RegistroPropietarioMascota" name="RegistroPropietarioMascota" value="" placeholder="Ingrese el propietario de la Mascota"><br><br>
+
+            <label for="RegistroFechaHistoria">Fecha de Apertura de historia Clinica:</label><br>
+            <input type="date" id="RegistroFechaHistoria" name="RegistroFechaHistoria" value="" min="2000-01-01"><br><br>
 
             <input class="sendbutton" type="submit" value="Crear Mascota" id="b_GuardarMascota">
         </form>

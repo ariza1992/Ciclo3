@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registro Visita</title>
+</head>
+
+<body>
+
+    <section id="header">
+
+        <ul class="nav">
+            <li><a href="Inicio.html">Inicio</a></li>
+
+            <li><a href="#">Registro</a>
+                <ul>
+                    <li><a href="RegistroMascota.html">Registro Mascota</a></li>
+                    <li><a href="RegistroPropietario.html">Registro Propietario</a></li>
+                    <li><a href="RegistroVeterinario.html">Registro Veterinario</a></li>
+                    <li><a href="RegistroHistoriaClinica.html">Registro Historia Clinica</a></li>
+                    <li><a href="RegistroVisita.html">Registro Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="">Consulta</a>
+                <ul>
+                    <li><a href="ConsultaMascotas.html">Consulta Mascota</a></li>
+                    <li><a href="ConsultaPropietario.html">Consulta Propietario</a></li>
+                    <li><a href="ConsultaVeterinario.html">Consulta Veterinario</a></li>
+                    <li><a href="ConsultaHistoria.html">Consulta Historia Clincia</a></li>
+                    <li><a href="ConsultaVisita.html">Consulta Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Modificar/Eliminar</a>
+                <ul>
+                    <li><a href="ModificarMascota.html">Mascota</a></li>
+                    <li><a href="ModificarPropietario.html">Propietario</a></li>
+                    <li><a href="ModificarVeterinario.html">Veterinario</a></li>
+                    <li><a href="ModificarHistoria.html">Historia Clinica</a></li>
+                    <li><a href="ModificarVisita.html">Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="">Acerca de</a></li>
+        </ul>
+        <br>
+    </section>
+
+
+
+    <section class="form_register">
+        <form action="/action_page.php">
+            <p id="subtitulo">Registro de Visita</p>
+
+            <label for="NumeroHistoria">Numero de Historia Clinica:</label><br>
+            <input class="controls" type="text" id="NumeroHistoria" name="NumeroHistoria" value="" placeholder="Ingrese el numero de la historia clinica"><br><br>
+           
+            <label for="RegistroNombreMascota">Nombre:</label><br>
+            <input class="controls" type="text" id="RegistroNombreMascota" name="RegistroNombreMascota" value="" placeholder=""><br><br>
+
+            <label for="RegistroFechaVisita">Fecha de Visita:</label><br>
+            <input type="date" id="RegistroFechaVisita" name="RegistroFechaVisita" value="" min="2000-01-01"><br><br>
+
+            <label for="TemperaturaVisita">Temperatura (°C):</label><br>
+            <input class="controls" type="text" id="TemperaturaVisita" name="TemperaturaVisita" value="" placeholder="Ingrese temperatura en °C"><br><br>
+
+            <label for="PesoVisita">Peso (kg):</label><br>
+            <input class="controls" type="text" id="PesoVisita" name="PesoVisita" value="" placeholder="Ingrese peso en kg"><br><br>
+
+            <label for="FrecRespVisita">Frecuencia Respiratoria (resp/min):</label><br>
+            <input class="controls" type="text" id="FrecRespVisita" name="FrecRespVisita" value="" placeholder="Ingrese frecuencia respiratoria respiraciones/min"><br><br>
+
+            <label for="FrecCardVisita">Frecuencia Cardiaca (latidos/min):</label><br>
+            <input class="controls" type="text" id="FrecCardVisita" name="FrecCardVisita" value="" placeholder="Ingrese frecuencia cardiaca latidos/min"><br><br>
+
+            <label for="EstadoAnimoVisita">Estado de animo:</label><br>
+            <select input class="combobox" name="EstadoAnimoVisita" id="EstadoAnimoVisita">
+                <option value="1">Asustado</option>
+                <option value="2">Irritado</option>
+                <option value="3">Curioso</option>
+                <option value="4">Alegre</option>
+                <option value="5">Otro</option>
+              </select><br><br>
+
+            <label for="IdProfVisita">Id del profesional (tarjeta profesional):</label><br>
+            <input class="controls" type="text" id="IdProfVisita" name="IdProfVisita" value="" placeholder="Ingrese numero de tarjeta profesional"><br><br>
+
+            <label for="RecomendacionesVisita">Recomendaciones:</label><br>
+            <input class="controls" type="text" id="RecomendacionesVisita" name="RecomendacionesVisita" value="" placeholder="Ingrese recomendaciones"><br><br>
+
+            <label for="MedicamentosVisita">Medicamentos:</label><br>
+            <input class="controls" type="text" id="MedicamentosVisita" name="MedicamentosVisita" value="" placeholder="Ingrese medicamentos"><br><br>
+
+
+            <input class="sendbutton" type="submit" value="Agregar Visita a la Historia" id="b_AgregarVisita">
+        </form>
+    </section>
+
+</body>
+
+</html>
