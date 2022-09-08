@@ -3,7 +3,6 @@ using MascotaFeliz.App.Dominio;
 using MascotaFeliz.App.Persistencia;
 using System.Collections.Generic;
 
-
 namespace MascotaFeliz.App.Consola
 {
     class Program
@@ -37,5 +36,20 @@ namespace MascotaFeliz.App.Consola
             };
             _repoDueno.AddDueno(dueno);
         }
+
+        private static void AddDueno()
+        {
+            var dueno = new Dueno
+            {
+                //Cedula = "1212",
+                Nombres = "Juan",
+                Apellidos = "Sin Miedo",
+                Direccion = "Bajo un puente",
+                Telefono = "1234567891",
+                Correo = "juansinmiedo@gmail.com"
+            };
+            _repoDueno.AddDueno(dueno);
+        }
+
     }
 }
