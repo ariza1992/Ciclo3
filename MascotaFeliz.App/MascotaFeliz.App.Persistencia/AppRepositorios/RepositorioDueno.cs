@@ -82,8 +82,4 @@ namespace MascotaFeliz.App.Persistencia
             return duenoEncontrado;
         }     
     }
-<<<<<<< HEAD
-}   
-=======
 }
->>>>>>> a2d755ce7b629618a414edb95d4651ec7be7cf2d
