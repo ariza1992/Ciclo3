@@ -68,7 +68,7 @@ namespace MascotaFeliz.App.Persistencia
         }
 
         public Dueno UpdateDueno(Dueno dueno)
-        {   
+        {
             var duenoEncontrado = _appContext.Duenos.FirstOrDefault(d => d.Id == dueno.Id);
             if (duenoEncontrado != null)
             {
@@ -82,4 +82,8 @@ namespace MascotaFeliz.App.Persistencia
             return duenoEncontrado;
         }     
     }
+<<<<<<< HEAD
 }   
+=======
+}
+>>>>>>> a2d755ce7b629618a414edb95d4651ec7be7cf2d
