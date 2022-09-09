@@ -23,11 +23,11 @@ namespace MascotaFeliz.App.Consola
             var dueno = new Dueno
             {
                 //Cedula = "1212",
-                Nombres = "Juan",
-                Apellidos = "Sin Miedo",
-                Direccion = "Bajo un puente",
-                Telefono = "1234567891",
-                Correo = "juansinmiedo@gmail.com"
+                Nombres = "Sebastian",
+                Apellidos = "Ariza",
+                Direccion = "Calle",
+                Telefono = "300",
+                Correo = "sebastian@gmail.com"
             };
             _repoDueno.AddDueno(dueno);
         }
