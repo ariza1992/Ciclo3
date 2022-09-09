@@ -10,11 +10,16 @@ namespace MascotaFeliz.App.Consola
 
         private static IRepositorioDueno _repoDueno = new RepositorioDueno(new Persistencia.AppContext());
 
+
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hola amigos vamos a empezar a trabjar con las tablas");
+
 
             AddDueno();
+
+
 
         }
 
@@ -31,6 +36,8 @@ namespace MascotaFeliz.App.Consola
             };
             _repoDueno.AddDueno(dueno);
         }
+
+
 
     }
 }
