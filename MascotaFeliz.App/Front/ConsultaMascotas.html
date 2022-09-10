@@ -1,45 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Consulta Mascota</title>
 </head>
+
 <body>
 
-<h2>HTML Table</h2>
+    <section id="header">
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Nombre</th>
-    <th>Color</th>
-    <th>Especie</th>
-    <th>Raza</th>
-  </tr>
-  <tr>
-    <td>01</td>
-    <td>Kity</td>
-    <td>Blanco</td>
-    <td>Gato</td>
-    <td>Criollo</td>
-  </tr>
-  
-</table>
+        <ul class="nav">
+            <li><a href="Inicio.html">Inicio</a></li>
+
+            <li><a href="#">Registro</a>
+                <ul>
+                    <li><a href="RegistroMascota.html">Registro Mascota</a></li>
+                    <li><a href="RegistroPropietario.html">Registro Propietario</a></li>
+                    <li><a href="RegistroVeterinario.html">Registro Veterinario</a></li>
+                    <li><a href="RegistroHistoriaClinica.html">Registro Historia Clinica</a></li>
+                    <li><a href="RegistroVisita.html">Registro Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="">Consulta</a>
+                <ul>
+                    <li><a href="ConsultaMascotas.html">Consulta Mascota</a></li>
+                    <li><a href="ConsultaPropietario.html">Consulta Propietario</a></li>
+                    <li><a href="ConsultaVeterinario.html">Consulta Veterinario</a></li>
+                    <li><a href="ConsultaHistoria.html">Consulta Historia Clincia</a></li>
+                    <li><a href="ConsultaVisita.html">Consulta Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Modificar/Eliminar</a>
+                <ul>
+                    <li><a href="ModificarMascota.html">Mascota</a></li>
+                    <li><a href="ModificarPropietario.html">Propietario</a></li>
+                    <li><a href="ModificarVeterinario.html">Veterinario</a></li>
+                    <li><a href="ModificarHistoria.html">Historia Clinica</a></li>
+                    <li><a href="ModificarVisita.html">Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="">Acerca de</a></li>
+        </ul>
+        <br>
+    </section>
+
+
+
+    <section class="form_register">
+        <form action="/action_page.php">
+            <p id="subtitulo">Consulta de Mascota</p>
+
+            <label for="ConsultaIdMascota">Id Mascota:</label><br>
+            <input class="controls" type="text" id="ConsultaIdMascota" name="ConsultaIdMascota" value="" placeholder="Por favor ingrese el ID de la mascota a consultar"><br><br>
+
+            <input class="sendbutton" type="submit" value="Buscar Mascota" id="b_BuscarMascota"><br><br>
+
+            <label for="ConsultaNombreMascota">Nombre:</label><br>
+            <input class="controls" type="text" id="ConsultaNombreMascota" name="ConsultaNombreMascota" value="" placeholder=""><br><br>
+
+            <label for="ConsultaColorMascota">Color:</label><br>
+            <input class="controls" type="text" id="ConsultaColorMascota" name="ConsultaColorMascota" value="" placeholder=""><br><br>
+
+            <label for="ConsultaEspecieMascota">Especie:</label><br>
+            <input class="controls" type="text" id="ConsultaEspecieMascota" name="ConsultaEspecieMascota" value="" placeholder=""><br><br>
+
+            <label for="ConsultaRazaMascota">Raza:</label><br>
+            <input class="controls" type="text" id="ConsultaRazaMascota" name="ConsultaRazaMascota" value="" placeholder=""><br><br>
+
+            <label for="ConsultaPropietarioMascota">Propietario:</label><br>
+            <input class="controls" type="text" id="ConsultaPropietarioMascota" name="ConsultaPropietarioMascota" value="" placeholder="">
+
+            
+        </form>
+    </section>
 
 </body>
+
 </html>

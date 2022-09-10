@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Consulta Propietario</title>
+</head>
+
+<body>
+
+    <section id="header">
+
+        <ul class="nav">
+            <li><a href="Inicio.html">Inicio</a></li>
+
+            <li><a href="#">Registro</a>
+                <ul>
+                    <li><a href="RegistroMascota.html">Registro Mascota</a></li>
+                    <li><a href="RegistroPropietario.html">Registro Propietario</a></li>
+                    <li><a href="RegistroVeterinario.html">Registro Veterinario</a></li>
+                    <li><a href="RegistroHistoriaClinica.html">Registro Historia Clinica</a></li>
+                    <li><a href="RegistroVisita.html">Registro Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="">Consulta</a>
+                <ul>
+                    <li><a href="ConsultaMascotas.html">Consulta Mascota</a></li>
+                    <li><a href="ConsultaPropietario.html">Consulta Propietario</a></li>
+                    <li><a href="ConsultaVeterinario.html">Consulta Veterinario</a></li>
+                    <li><a href="ConsultaHistoria.html">Consulta Historia Clincia</a></li>
+                    <li><a href="ConsultaVisita.html">Consulta Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Modificar/Eliminar</a>
+                <ul>
+                    <li><a href="ModificarMascota.html">Mascota</a></li>
+                    <li><a href="ModificarPropietario.html">Propietario</a></li>
+                    <li><a href="ModificarVeterinario.html">Veterinario</a></li>
+                    <li><a href="ModificarHistoria.html">Historia Clinica</a></li>
+                    <li><a href="ModificarVisita.html">Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="">Acerca de</a></li>
+        </ul>
+        <br>
+    </section>
+
+
+    <section class="form_register">
+        <form action="/action_page.php">
+            <p id="subtitulo">Consulta de Propietario</p>
+
+            <label for="ConsultaIdPropietario">Id Propietario:</label><br>
+            <input class="controls" type="text" id="RegistroIdentificacionPropietario" name="RegistroIdentificacionPropietario" value="" placeholder="Por favor ingrese el ID del propietario a consultar"><br><br>
+
+            <input class="sendbutton" type="submit" value="Buscar Propietario" id="b_BuscarPropietario"><br><br>
+
+            <label for="ConsultaNombresPropietario">Nombres:</label><br>
+            <input class="controls" type="text" id="ConsultaNombresPropietario" name="ConsultaNombresPropietario" value="" placeholder=""><br><br>
+
+            <label for="ConsultaApellidosPropietario">Apellidos:</label><br>
+            <input class="controls" type="text" id="ConsultaApellidosPropietario" name="ConsultaApellidosPropietario" value="" placeholder=""><br><br>
+
+            <label for="ConsultaDireccionPropietario">Dirección:</label><br>
+            <input class="controls" type="text" id="ConsultaDireccionPropietario" name="ConsultaDireccionPropietario" value="" placeholder=""><br><br>
+
+            <label for="ConsultaTelefonoPropietario">Telefono:</label><br>
+            <input class="controls" type="text" id="ConsultaTelefonoPropietario" name="ConsultaTelefonoPropietario" value="" placeholder=""><br><br>
+
+            <label for="ConsultaCorreoPropietario">Correo Electronico:</label><br>
+            <input class="controls" type="text" id="ConsultaCorreoPropietario" name="ConsultaCorreoPropietario" value="" placeholder="">
+
+        </form>
+    </section>
+
+</body>
+
+</html>

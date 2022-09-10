@@ -26,17 +26,24 @@ namespace MascotaFeliz.App.Consola
             //ListarMascotas();
             //ListarDuenosFiltro();
             //ListarVeterinariosFiltro();
-            ListarMascotasFiltro();
+            //ListarMascotasFiltro();
+            //EliminarDueno(8);
+            //EliminarVeterinario(4);
+            //EliminarMascota(2);
+            //ActualizarDueno(1);
+            //ActualizarVeterinario(5);
+            ActualizarMascota(3);
 
         }
 
-        private static void AddDueno()
+        //------------------------------------AGREGAR----------------------------------
+
+    private static void AddDueno()
         {
             var dueno = new Dueno
             {
-                //Cedula = "1212",
-                Nombres = "Erick",
-                Apellidos = "ladino",
+                Nombres = "Sofi",
+                Apellidos = "A",
                 Direccion = "Carrera",
                 Telefono = "310",
                 Correo = "erick@gmail.com"
@@ -48,9 +55,8 @@ namespace MascotaFeliz.App.Consola
         {
             var veterinario = new Veterinario
             {
-                //Cedula = "1212",
-                Nombres = "Daniel",
-                Apellidos = "Renteria",
+                Nombres = "Cesar",
+                Apellidos = "Millan",
                 Direccion = "Avenida",
                 Telefono = "312",
                 TarjetaProfesional = "56789"
@@ -62,13 +68,15 @@ namespace MascotaFeliz.App.Consola
     {
         var mascota = new Mascota 
         {
-        Nombre = "Michi",
-        Color = "Blanco",
-        Especie = "Gato",
+        Nombre = "Rex",
+        Color = "Verde",
+        Especie = "Dino",
         Raza = "Criollo"
         };
     _repoMascota.AddMascota(mascota);
     }
+
+    //---------------------------------------BUSCAR------------------------------------
 
     private static void BuscarDueno (int idDueno)
     {
@@ -89,6 +97,8 @@ namespace MascotaFeliz.App.Consola
         var mascota = _repoMascota.GetMascota(idMascota);
         Console.WriteLine (mascota.Nombre + " / " + mascota.Color + " / " + mascota.Especie + " / " + mascota.Raza + " / " + mascota.Dueno + " / " + mascota.Veterinario);
     }
+
+    //-------------------------------------LISTAR-------------------------------------
 
     private static void ListarDuenos()
     {
@@ -117,6 +127,8 @@ namespace MascotaFeliz.App.Consola
         }
     }
 
+    //-------------------------------LISTAR POR FILTRO--------------------------------
+
     private static void ListarDuenosFiltro()
     {
         var duenos = _repoDueno.GetDuenosPorFiltro("J");
@@ -142,6 +154,72 @@ namespace MascotaFeliz.App.Consola
         {
             Console.WriteLine (d.Id + " " + d.Nombre + " " + d.Color);
         }
+    }
+
+    //-------------------------------------ELIMINAR-----------------------------------
+
+    private static void EliminarDueno (int idDueno)
+    {
+        _repoDueno.DeleteDueno(idDueno);
+        Console.WriteLine ("Se elimino el dueño con Id: " + idDueno);
+    }
+
+    private static void EliminarVeterinario (int idVeterinario)
+    {
+        _repoVeterinario.DeleteVeterinario(idVeterinario);
+        Console.WriteLine ("Se elimino el veterinario con Id: " + idVeterinario);
+    }
+
+    private static void EliminarMascota (int idMascota)
+    {
+        _repoMascota.DeleteMascota(idMascota);
+        Console.WriteLine ("Se elimino la mascota con Id: " + idMascota);
+    }
+
+    //-----------------------------------ACTUALIZAR-----------------------------------
+
+    private static void ActualizarDueno(int idDueno)
+        {
+            var dueno = new Dueno
+            {
+                Id = idDueno,
+                Nombres = "Sofi",
+                Apellidos = "A",
+                Direccion = "Carrera",
+                Telefono = "310",
+                Correo = "sofia@gmail.com"
+            };
+            _repoDueno.UpdateDueno(dueno);
+            Console.WriteLine ("Se actualizo el dueño con Id: " + idDueno);
+        }
+
+    private static void ActualizarVeterinario(int idVeterinario)
+        {
+            var veterinario = new Veterinario
+            {
+                Id = idVeterinario,
+                Nombres = "Cami",
+                Apellidos = "A",
+                Direccion = "Avenida",
+                Telefono = "312",
+                TarjetaProfesional = "56789"
+            };
+            _repoVeterinario.UpdateVeterinario(veterinario);
+            Console.WriteLine ("Se actualizo el veterinario con Id: " + idVeterinario);
+        }
+
+    private static void ActualizarMascota(int idMascota)
+        {
+            var mascota = new Mascota 
+            {
+                Id = idMascota,
+                Nombre = "TRex",
+                Color = "Azul",
+                Especie = "Dinosaurio",
+                Raza = "Criollo"
+            };
+            _repoMascota.UpdateMascota(mascota);
+            Console.WriteLine ("Se actualizo la mascota con Id: " + idMascota);
     }
 
     }
