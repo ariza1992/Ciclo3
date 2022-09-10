@@ -31,7 +31,7 @@
                     <li><a href="ConsultaMascotas.html">Consulta Mascota</a></li>
                     <li><a href="ConsultaPropietario.html">Consulta Propietario</a></li>
                     <li><a href="ConsultaVeterinario.html">Consulta Veterinario</a></li>
-                    <li><a href="ConsultaHistoria.html">Consulta Historia Clincia</a></li>
+                    <li><a href="ConsultaHistoria.html">Consulta Historia Clinica</a></li>
                     <li><a href="ConsultaVisita.html">Consulta Visita</a></li>
                 </ul>
             </li>
@@ -46,7 +46,16 @@
                 </ul>
             </li>
 
-            <li><a href="">Acerca de</a></li>
+            <li><a href="#">Listar</a>
+                <ul>
+                    <li><a href="ListarMascotas.html">Listar Mascotas</a></li>
+                    <li><a href="ListarPropietarios.html">Listar Propietarios</a></li>
+                    <li><a href="ListarVeterinarios.html">Listar Veterinarios</a></li>
+                    <li><a href="ListarHistorias.html">Listar Historias</a></li>
+                </ul>            
+            </li>
+
+           
         </ul>
         <br>
     </section>
@@ -75,9 +84,14 @@
             <input class="controls" type="text" id="ConsultaRazaMascota" name="ConsultaRazaMascota" value="" placeholder=""><br><br>
 
             <label for="ConsultaPropietarioMascota">Propietario:</label><br>
-            <input class="controls" type="text" id="ConsultaPropietarioMascota" name="ConsultaPropietarioMascota" value="" placeholder="">
+            <input class="controls" type="text" id="ConsultaPropietarioMascota" name="ConsultaPropietarioMascota" value="" placeholder=""><br><br>
 
-            
+            <label for="ConsultaVeterinarioMascota">Veterinario:</label><br>
+            <input class="controls" type="text" id="ConsultaVeterinarioMascota" name="ConsultaVeterinarioMascota" value="" placeholder=""><br><br>
+
+            <a href="ModificarMascota.html"><input class="consultbutton eliminar" type="submit" value="Modificar o Eliminar" id="b_ModificarEliminarMascota"></a>
+            <a href="ConsultaHistoria.html"><input class="consultbutton historia" type="submit" value="Ir a Historia" id="b_HistoriaMascota"></a>
+            <a href="RegistroVisita.html"><input class="consultbutton visita" type="submit" value="Registrar Una Visita" id="b_VisitaMascota"></a>
         </form>
     </section>
 

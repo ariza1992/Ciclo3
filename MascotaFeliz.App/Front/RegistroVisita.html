@@ -9,47 +9,54 @@
     <title>Registro Visita</title>
 </head>
 
-<body>
+<section id="header">
 
-    <section id="header">
+    <ul class="nav">
+        <li><a href="Inicio.html">Inicio</a></li>
 
-        <ul class="nav">
-            <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="#">Registro</a>
+            <ul>
+                <li><a href="RegistroMascota.html">Registro Mascota</a></li>
+                <li><a href="RegistroPropietario.html">Registro Propietario</a></li>
+                <li><a href="RegistroVeterinario.html">Registro Veterinario</a></li>
+                <li><a href="RegistroHistoriaClinica.html">Registro Historia Clinica</a></li>
+                <li><a href="RegistroVisita.html">Registro Visita</a></li>
+            </ul>
+        </li>
 
-            <li><a href="#">Registro</a>
-                <ul>
-                    <li><a href="RegistroMascota.html">Registro Mascota</a></li>
-                    <li><a href="RegistroPropietario.html">Registro Propietario</a></li>
-                    <li><a href="RegistroVeterinario.html">Registro Veterinario</a></li>
-                    <li><a href="RegistroHistoriaClinica.html">Registro Historia Clinica</a></li>
-                    <li><a href="RegistroVisita.html">Registro Visita</a></li>
-                </ul>
-            </li>
+        <li><a href="">Consulta</a>
+            <ul>
+                <li><a href="ConsultaMascotas.html">Consulta Mascota</a></li>
+                <li><a href="ConsultaPropietario.html">Consulta Propietario</a></li>
+                <li><a href="ConsultaVeterinario.html">Consulta Veterinario</a></li>
+                <li><a href="ConsultaHistoria.html">Consulta Historia Clinica</a></li>
+                <li><a href="ConsultaVisita.html">Consulta Visita</a></li>
+            </ul>
+        </li>
 
-            <li><a href="">Consulta</a>
-                <ul>
-                    <li><a href="ConsultaMascotas.html">Consulta Mascota</a></li>
-                    <li><a href="ConsultaPropietario.html">Consulta Propietario</a></li>
-                    <li><a href="ConsultaVeterinario.html">Consulta Veterinario</a></li>
-                    <li><a href="ConsultaHistoria.html">Consulta Historia Clincia</a></li>
-                    <li><a href="ConsultaVisita.html">Consulta Visita</a></li>
-                </ul>
-            </li>
+        <li><a href="#">Modificar/Eliminar</a>
+            <ul>
+                <li><a href="ModificarMascota.html">Mascota</a></li>
+                <li><a href="ModificarPropietario.html">Propietario</a></li>
+                <li><a href="ModificarVeterinario.html">Veterinario</a></li>
+                <li><a href="ModificarHistoria.html">Historia Clinica</a></li>
+                <li><a href="ModificarVisita.html">Visita</a></li>
+            </ul>
+        </li>
 
-            <li><a href="#">Modificar/Eliminar</a>
-                <ul>
-                    <li><a href="ModificarMascota.html">Mascota</a></li>
-                    <li><a href="ModificarPropietario.html">Propietario</a></li>
-                    <li><a href="ModificarVeterinario.html">Veterinario</a></li>
-                    <li><a href="ModificarHistoria.html">Historia Clinica</a></li>
-                    <li><a href="ModificarVisita.html">Visita</a></li>
-                </ul>
-            </li>
+        <li><a href="#">Listar</a>
+            <ul>
+                <li><a href="ListarMascotas.html">Listar Mascotas</a></li>
+                <li><a href="ListarPropietarios.html">Listar Propietarios</a></li>
+                <li><a href="ListarVeterinarios.html">Listar Veterinarios</a></li>
+                <li><a href="ListarHistorias.html">Listar Historias</a></li>
+            </ul>            
+        </li>
 
-            <li><a href="">Acerca de</a></li>
-        </ul>
-        <br>
-    </section>
+       
+    </ul>
+    <br>
+</section>
 
 
 
@@ -57,12 +64,17 @@
         <form action="/action_page.php">
             <p id="subtitulo">Registro de Visita</p>
 
-            <label for="NumeroHistoria">Numero de Historia Clinica:</label><br>
-            <input class="controls" type="text" id="NumeroHistoria" name="NumeroHistoria" value="" placeholder="Ingrese el numero de la historia clinica"><br><br>
-           
-            <label for="RegistroNombreMascota">Nombre:</label><br>
-            <input class="controls" type="text" id="RegistroNombreMascota" name="RegistroNombreMascota" value="" placeholder=""><br><br>
+            <label for="RegistroIdMascota">Id:</label><br>
+            <input class="controls" type="text" id="RegistroIdMascota" name="RegistroIdMascota" value="" placeholder="Ingrese el Id de la Mascota"><br><br>
 
+            <input class="sendbutton" type="submit" value="Consultar" id="b_ConsultarVisitaMascota"><br><br>
+
+            <label for="RegistroNombreMascota">Nombre:</label><br>
+            <input class="controls" type="text" id="RegistroNombreMascota" name="RegistroNombreMascota" value="" placeholder="ESTO SE DEBERIA LLENAR AL DAR CONSULTAR"><br><br>
+
+            <label for="NumeroHistoria">Numero de Historia Clinica:</label><br>
+            <input class="controls" type="text" id="NumeroHistoria" name="NumeroHistoria" value="" placeholder="ESTO SE DEBERIA LLENAR AL DAR CONSULTAR"><br><br>
+           
             <label for="RegistroFechaVisita">Fecha de Visita:</label><br>
             <input type="date" id="RegistroFechaVisita" name="RegistroFechaVisita" value="" min="2000-01-01"><br><br>
 
@@ -87,15 +99,14 @@
                 <option value="5">Otro</option>
               </select><br><br>
 
-            <label for="IdProfVisita">Id del profesional (tarjeta profesional):</label><br>
-            <input class="controls" type="text" id="IdProfVisita" name="IdProfVisita" value="" placeholder="Ingrese numero de tarjeta profesional"><br><br>
+            <label for="IdProfVisita">Id del profesional:</label><br>
+            <input class="controls" type="text" id="IdProfVisita" name="IdProfVisita" value="" placeholder="Ingrese el Id del profesional"><br><br>
 
             <label for="RecomendacionesVisita">Recomendaciones:</label><br>
             <input class="controls" type="text" id="RecomendacionesVisita" name="RecomendacionesVisita" value="" placeholder="Ingrese recomendaciones"><br><br>
 
             <label for="MedicamentosVisita">Medicamentos:</label><br>
             <input class="controls" type="text" id="MedicamentosVisita" name="MedicamentosVisita" value="" placeholder="Ingrese medicamentos"><br><br>
-
 
             <input class="sendbutton" type="submit" value="Agregar Visita a la Historia" id="b_AgregarVisita">
         </form>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Modificar o Eliminar Historia</title>
+</head>
+
+<body>
+
+    <section id="header">
+
+        <ul class="nav">
+            <li><a href="Inicio.html">Inicio</a></li>
+
+            <li><a href="#">Registro</a>
+                <ul>
+                    <li><a href="RegistroMascota.html">Registro Mascota</a></li>
+                    <li><a href="RegistroPropietario.html">Registro Propietario</a></li>
+                    <li><a href="RegistroVeterinario.html">Registro Veterinario</a></li>
+                    <li><a href="RegistroHistoriaClinica.html">Registro Historia Clinica</a></li>
+                    <li><a href="RegistroVisita.html">Registro Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="">Consulta</a>
+                <ul>
+                    <li><a href="ConsultaMascotas.html">Consulta Mascota</a></li>
+                    <li><a href="ConsultaPropietario.html">Consulta Propietario</a></li>
+                    <li><a href="ConsultaVeterinario.html">Consulta Veterinario</a></li>
+                    <li><a href="ConsultaHistoria.html">Consulta Historia Clinica</a></li>
+                    <li><a href="ConsultaVisita.html">Consulta Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Modificar/Eliminar</a>
+                <ul>
+                    <li><a href="ModificarMascota.html">Mascota</a></li>
+                    <li><a href="ModificarPropietario.html">Propietario</a></li>
+                    <li><a href="ModificarVeterinario.html">Veterinario</a></li>
+                    <li><a href="ModificarHistoria.html">Historia Clinica</a></li>
+                    <li><a href="ModificarVisita.html">Visita</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Listar</a>
+                <ul>
+                    <li><a href="ListarMascotas.html">Listar Mascotas</a></li>
+                    <li><a href="ListarPropietarios.html">Listar Propietarios</a></li>
+                    <li><a href="ListarVeterinarios.html">Listar Veterinarios</a></li>
+                    <li><a href="ListarHistorias.html">Listar Historias</a></li>
+                </ul>            
+            </li>
+
+           
+        </ul>
+        <br>
+    </section>
+
+
+
+    <section class="form_register">
+        <form action="/action_page.php">
+            <p id="subtitulo">Modificar o Eliminar Historia Clinica</p>
+
+            <label for="ConsultaIdVeterinario">Id Mascota:</label><br>
+            <input class="controls" type="text" id="ConsultaIdVeterinario" name="ConsultaIdVeterinario" value="" placeholder="Por favor ingrese el ID de la mascota a consultar"><br><br>
+
+            <input class="sendbutton" type="submit" value="Buscar Historia" id="b_BuscarHistoria"><br><br>
+
+            <label for="ConsultaNombreMascota">Nombre:</label><br>
+            <input class="controls" type="text" id="ConsultaNombreMascota" name="ConsultaNombreMascota" value="" placeholder="ESTO SE DEBE LLENAR AL DAR CONSULTAR"><br><br>
+
+            <label for="ConsultaHistoriaMascota">Id Historia:</label><br>
+            <input class="controls" type="text" id="ConsultaHistoriaMascota" name="ConsultaHistoriaMascota" value="" placeholder="ESTO SE DEBE LLENAR AL DAR CONSULTAR"><br><br>
+
+            <label for="ConsultaFechaHistoria">Fecha de Apertura de historia Clinica:</label><br>
+            <input type="date" id="ConsultaFechaHistoria" name="ConsultaFechaHistoria" value="" min="2000-01-01"><br><br>
+
+            <table class = "small">
+              <tr>
+                <th>ID Visita</th>
+                <th>Fecha</th>
+                <th>Id Veterinario</th>
+                <th>Acción</th>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>01/01/2020</td>
+                <td>10</td>
+                <td><a href="ModificarVisita.html"><input class="" type="submit" value="Modificar" id="b_ModificarVisitaMascota"></a> <input class="" type="submit" value="Eliminar" id="b_EliminarVisitaMascota"></td>
+                </tr>
+              <tr>
+                <td>02</td>
+                <td>20/10/2021</td>
+                <td>8</td>
+                <td><a href="ModificarVisita.html"><input class="" type="submit" value="Modificar" id="b_ModificarVisitaMascota"></a> <input class="" type="submit" value="Eliminar" id="b_EliminarVisitaMascota"></td>
+              </tr>
+            </table><br>
+
+            <input class="modifybutton modificar" type="submit" value="Modificar" id="b_ModificarHistoria">
+            <input class="modifybutton eliminar" type="submit" value="Eliminar" id="b_EliminarHistoria">
+            
+
+            
+        </form>
+    </section>
+
+</body>
+
+</html>

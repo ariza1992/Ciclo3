@@ -1,45 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Listado Mascotas</title>
 </head>
+
 <body>
 
-<h2>HTML Table</h2>
+  <section id="header">
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Nombre</th>
-    <th>Color</th>
-    <th>Especie</th>
-    <th>Raza</th>
-  </tr>
-  <tr>
-    <td>01</td>
-    <td>Kity</td>
-    <td>Blanco</td>
-    <td>Gato</td>
-    <td>Criollo</td>
-  </tr>
-  
-</table>
+    <ul class="nav">
+        <li><a href="Inicio.html">Inicio</a></li>
+
+        <li><a href="#">Registro</a>
+            <ul>
+                <li><a href="RegistroMascota.html">Registro Mascota</a></li>
+                <li><a href="RegistroPropietario.html">Registro Propietario</a></li>
+                <li><a href="RegistroVeterinario.html">Registro Veterinario</a></li>
+                <li><a href="RegistroHistoriaClinica.html">Registro Historia Clinica</a></li>
+                <li><a href="RegistroVisita.html">Registro Visita</a></li>
+            </ul>
+        </li>
+
+        <li><a href="">Consulta</a>
+            <ul>
+                <li><a href="ConsultaMascotas.html">Consulta Mascota</a></li>
+                <li><a href="ConsultaPropietario.html">Consulta Propietario</a></li>
+                <li><a href="ConsultaVeterinario.html">Consulta Veterinario</a></li>
+                <li><a href="ConsultaHistoria.html">Consulta Historia Clinica</a></li>
+                <li><a href="ConsultaVisita.html">Consulta Visita</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Modificar/Eliminar</a>
+            <ul>
+                <li><a href="ModificarMascota.html">Mascota</a></li>
+                <li><a href="ModificarPropietario.html">Propietario</a></li>
+                <li><a href="ModificarVeterinario.html">Veterinario</a></li>
+                <li><a href="ModificarHistoria.html">Historia Clinica</a></li>
+                <li><a href="ModificarVisita.html">Visita</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Listar</a>
+            <ul>
+                <li><a href="ListarMascotas.html">Listar Mascotas</a></li>
+                <li><a href="ListarPropietarios.html">Listar Propietarios</a></li>
+                <li><a href="ListarVeterinarios.html">Listar Veterinarios</a></li>
+                <li><a href="ListarHistorias.html">Listar Historias</a></li>
+            </ul>            
+        </li>
+
+       
+    </ul>
+    <br>
+</section>
+
+
+
+    <section class="form_table">
+
+      <p id="subtitulo">Listado de Mascotas</p>
+
+      <table class = "list">
+        <tr>
+          <th>ID Mascota</th>
+          <th>Nombre</th>
+          <th>Color</th>
+          <th>Especie</th>
+          <th>Raza</th>
+          <th>Propietario</th>
+          <th>Veterinario</th>
+          <th>Historia Clinica</th>
+          <th>Consultar</th>
+          <th>Modificar/Eliminar</th>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>Michi</td>
+          <td>Blanco</td>
+          <td>Gato</td>
+          <td>Criollo</td>
+          <td><input class="" type="submit" value="Ir a Propietario" id="b_ConsultarPropietarioMascota"></td>
+          <td><input class="" type="submit" value="Ir a Veterinario" id="b_ConsultarVeterinarioMascota"></td>
+          <td><input class="" type="submit" value="Ir a Historia" id="b_ConsultarHistoriaMascota"></td>
+          <td><input class="" type="submit" value="Ir a Mascota" id="b_ConsultarMascota"></td>
+          <td><a href="ModificarVisita.html"><input class="" type="submit" value="Modificar o Eliminar" id="b_ModificarVisitaMascota"></a></td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Pluto</td>
+          <td>Cafe</td>
+          <td>Perro</td>
+          <td>Criollo</td>
+          <td><input class="" type="submit" value="Ir a Dueño" id="b_ConsultarDueñoMascota"></td>
+          <td><input class="" type="submit" value="Ir a Veterinario" id="b_ConsultarVeterinarioMascota"></td>
+          <td><input class="" type="submit" value="Ir a Historia" id="b_ConsultarHistoriaMascota"></td>
+          <td><input class="" type="submit" value="Ir a Mascota" id="b_ConsultarMascota"></td>
+          <td><a href="ModificarVisita.html"><input class="" type="submit" value="Modificar o Eliminar" id="b_ModificarVisitaMascota"></a></td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>Rex</td>
+          <td>Verde</td>
+          <td>Dinosaurio</td>
+          <td>Desconocido</td>
+          <td><input class="" type="submit" value="Ir a Dueño" id="b_ConsultarDueñoMascota"></td>
+          <td><input class="" type="submit" value="Ir a Veterinario" id="b_ConsultarVeterinarioMascota"></td>
+          <td><input class="" type="submit" value="Ir a Historia" id="b_ConsultarHistoriaMascota"></td>
+          <td><input class="" type="submit" value="Ir a Mascota" id="b_ConsultarMascota"></td>
+          <td><a href="ModificarVisita.html"><input class="" type="submit" value="Modificar o Eliminar" id="b_ModificarVisitaMascota"></a></td>
+        </tr>
+      </table>
+
+        </form>
+    </section>
 
 </body>
+
 </html>

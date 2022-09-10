@@ -96,15 +96,15 @@ h2 {
     color: #ffffff;
 }
 
-.form-register {
-    width: 500px;
-    background: #14151d;
-    padding: 50px;
+.form_table {
+    width: 1150px;
+    background-color: #282b39;
+    padding: 29px;
     margin: auto;
-    margin-top: 120px;
-    border-radius: 50px;
+    margin-top: 30px;
+    border-radius: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #7e7e7e;
+    color: #ffffff;
 }
 
 #titulo {
@@ -142,6 +142,36 @@ h2 {
     padding: 7px;
     border-radius: 4px;
 }
+
+.consultbutton {
+    width: 30%;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    padding: 7px;
+    font-size: 13px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.eliminar {background-color: rgb(204, 68, 68);}
+.historia {background-color: rgb(68, 131, 204);}
+.visita {background-color: rgb(52, 150, 126);}
+.modificar {background-color: rgb(52, 150, 126);}
+
+.modifybutton {
+    width: 30%;
+    color: white;
+    text-align: center;
+    margin-left: 50px;
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
 
 .combobox {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -219,18 +249,17 @@ h2 {
 }
 
 
-/*
-  .card {
-    margin: 30px auto;
-    width: 300px;
-    height: 300px;
-    border-radius: 40px;
-    background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-repeat: no-repeat;
-  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-    transition: 0.4s;
-  }
-  */
+table.small , th, td {
+    margin-left: auto; 
+    margin-right: auto;
+    border: 1px solid rgb(131, 131, 131);
+    background-color:#1f212e;
+    padding: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table.list {
+    width:1100px;
+    margin-left: auto; 
+    margin-right: auto;
+}
