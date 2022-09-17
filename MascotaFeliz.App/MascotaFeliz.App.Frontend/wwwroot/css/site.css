@@ -1,6 +1,100 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("img/background.jpg");
+}
+
+.nav {
+
+  margin: auto;
+  width: 490px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 100px;
+
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.nav>li {
+  float: left;
+}
+
+.nav li a {
+  background-color: #434343;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 12px;
+  display: block;
+  border: 1px solid #434343;
+}
+
+.nav li a:hover {
+  background-color: #434343;
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.nav li:hover>ul {
+  display: block;
+}
+
+.nav li ul li {
+  position: relative;
+}
+
+.nav li ul li ul {
+  right: -140px;
+  top: 0px;
+
+}
+
+p.cien {
+  font-weight: 100;
+}
+
+p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inicio {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f7f5f5;
+
+}
+
+
+
+
+
+
+
+/* ESTE ES EL ORIGINAL*/
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;

@@ -9,31 +9,59 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">MascotaFeliz.App.Frontend</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="Duenos/ListaDuenos">Listar Dueños</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="Duenos/ConsultaDueno">Consulta Dueño</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="Duenos/ModificaDueno">Nuevo Dueño</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+       <section id="header">
+
+        <ul class="nav">
+            <li><a href="/Index">Inicio</a></li>
+
+            <li><a href="#">Registro</a>
+                <ul>
+                    <li><a href="#">Registro Mascota</a></li>
+                    <li><a href="/Duenos/ModificaDueno">Registro Propietario</a></li>
+                    <li><a href="/Veterinarios/ModificaVeterinario">Registro Veterinario</a></li>
+                    <li><a href="#">Registro Historia Clinica</a></li>
+                    <li><a href="#">Registro Visita</a></li>
+                </ul>
+            </li>
+
+            <!--
+            <li><a href="">Consulta</a>
+                <ul>
+                    <li><a href="ConsultaMascotas.html">Consulta Mascota</a></li>
+                    <li><a href="ConsultaPropietario.html">Consulta Propietario</a></li>
+                    <li><a href="ConsultaVeterinario.html">Consulta Veterinario</a></li>
+                    <li><a href="ConsultaHistoria.html">Consulta Historia Clinica</a></li>
+                    <li><a href="ConsultaVisita.html">Consulta Visita</a></li>
+                </ul>
+            </li>
+            
+
+            <li><a href="#">Modificar/Eliminar</a>
+                <ul>
+                    <li><a href="ModificarMascota.html">Mascota</a></li>
+                    <li><a href="ModificarPropietario.html">Propietario</a></li>
+                    <li><a href="ModificarVeterinario.html">Veterinario</a></li>
+                    <li><a href="ModificarHistoria.html">Historia Clinica</a></li>
+                    <li><a href="ModificarVisita.html">Visita</a></li>
+                </ul>
+            </li>
+
+            -->
+
+            <li><a href="#">Listar</a>
+                <ul>
+                    <li><a href="#">Listar Mascotas</a></li>
+                    <li><a href="/Duenos/ListaDuenos">Listar Propietarios</a></li>
+                    <li><a href="/Veterinarios/ListaVeterinarios">Listar Veterinarios</a></li>
+                    <li><a href="#">Listar Historias</a></li>
+                </ul>
+            </li>
+
+           
+        </ul>
+        <br>
+    </section>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
