@@ -80,3 +80,4 @@ C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\Mascota
 C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\bin\Debug\netcoreapp3.1\MascotaFeliz.App.Dominio.pdb
 C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\bin\Debug\netcoreapp3.1\MascotaFeliz.App.Persistencia.pdb
 C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Duenos\ListaDuenos.cshtml.g.cs
+C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Duenos\ConsultaDueno.cshtml.g.cs

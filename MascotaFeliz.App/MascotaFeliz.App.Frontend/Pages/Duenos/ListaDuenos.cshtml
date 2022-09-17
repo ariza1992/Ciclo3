@@ -11,6 +11,10 @@
         <th>Id</th>
         <th>Nombre</th>
         <th>Apellidos</th>
+        <th>Dirección</th>
+        <th>Telefono</th>
+        <th>Correo</th>
+        <th>Acción</th>
     </tr>
 
     @foreach (var dueno in Model.listaDuenos)
@@ -19,8 +23,12 @@
         <td>@dueno.Id</td>
         <td>@dueno.Nombres</td>
         <td>@dueno.Apellidos</td>
+        <td>@dueno.Direccion</td>
+        <td>@dueno.Telefono</td>
+        <td>@dueno.Correo</td>
         <td>
-            <a class = "btn btn-primary table-btn" asp-page="./ConsultaDuenos" asp-route-duenoId="@dueno.Id">Ir a Dueño</a>
+            <a class = "btn btn-primary table-btn" asp-page="./ConsultaDueno" asp-route-duenoId="@dueno.Id">Ir a Dueño</a>
+            <a class = "btn btn-primary table-btn" asp-page="./ModificaDueno" asp-route-duenoId="@dueno.Id">Modificar Dueño</a>
         </td>
     </tr>
     }
