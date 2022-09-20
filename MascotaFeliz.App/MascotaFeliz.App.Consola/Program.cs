@@ -17,7 +17,7 @@ namespace MascotaFeliz.App.Consola
 
             //AddDueno();
             //AddVeterinario();
-            AddMascota();
+            //AddMascota();
             //BuscarDueno(1);
             //BuscarVeterinario(4);
             //BuscarMascota(1);
@@ -33,6 +33,8 @@ namespace MascotaFeliz.App.Consola
             //ActualizarDueno(1);
             //ActualizarVeterinario(5);
             //ActualizarMascota(3);
+            //AsignarVeterinario();
+            AsignarDueno();
 
         }
 
@@ -222,6 +224,62 @@ namespace MascotaFeliz.App.Consola
             _repoMascota.UpdateMascota(mascota);
             Console.WriteLine ("Se actualizo la mascota con Id: " + idMascota);
     }
+
+    //--------------------------------ASIGNAR---------------------------------------
+
+    private static void AsignarVeterinario()
+    {
+        var veterinario = _repoMascota.AsignarVeterinario (1,7);
+        Console.WriteLine(veterinario.Nombres + " " + veterinario.Apellidos);
+    }
+
+    private static void AsignarDueno()
+    {
+        var veterinario = _repoMascota.AsignarDueno (1,3);
+        Console.WriteLine(veterinario.Nombres + " " + veterinario.Apellidos);
+    }
+
+    /*
+        private static void AsignarVisitaPyP(int idHistoria)
+        {
+            var historia = _repoHistoria.GetHistoria(idHistoria);
+            if (historia != null)
+            {
+                if (historia.VisitasPyP != null)
+                {
+                    historia.VisitasPyP.Add(new VisitaPyP 
+                    { 
+                        FechaVisita = new DateTime(2020, 01, 01), 
+                        Temperatura = 38.0F, Peso = 30.0F, 
+                        FrecuenciaRespiratoria = 71.0F, 
+                        FrecuenciaCardiaca = 71.0F, 
+                        EstadoAnimo = "Muy cansón", 
+                        CedulaVeterinario = "123", 
+                        Recomendaciones = "Dieta extrema"
+                    });
+                }
+                else
+                {
+                    historia.VisitasPyP = new List<VisitaPyP>
+                    {
+                        new VisitaPyP
+                        {
+                            FechaVisita = new DateTime(2020, 01, 01), 
+                            Temperatura = 38.0F, Peso = 30.0F, 
+                            FrecuenciaRespiratoria = 71.0F, 
+                            FrecuenciaCardiaca = 71.0F, 
+                            EstadoAnimo = "Muy cansón", 
+                            CedulaVeterinario = "123", 
+                            Recomendaciones = "Dieta extrema" 
+                            }
+                    };
+                }
+                _repoHistoria.UpdateHistoria(historia);
+            }
+        }
+        */
+
+    
 
     }
 }
