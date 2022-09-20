@@ -85,3 +85,6 @@ C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\Mascota
 C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Veterinarios\ListaVeterinarios.cshtml.g.cs
 C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Veterinarios\ConsultaVeterinario.cshtml.g.cs
 C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Veterinarios\ModificaVeterinario.cshtml.g.cs
+C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\ListaMascotas.cshtml.g.cs
+C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\ConsultaMascota.cshtml.g.cs
+C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\ModificaMascota.cshtml.g.cs

@@ -1,0 +1,43 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaMascotasModel
+@{
+}
+
+<h1>Lista de Mascotas</h1>
+
+<table class = "table">
+
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Color</th>
+        <th>Dueño</th>
+        <th>Veterinario</th>
+        <th>Historia</th>
+        <th>Acción</th>
+    </tr>
+
+    @foreach (var mascota in Model.listaMascotas)
+    {
+    <tr>
+        <td>@mascota.Id</td>
+        <td>@mascota.Nombre</td>
+        <td>@mascota.Color</td>
+        <td><a class = "btn btn-primary table-btn" asp-page="/Duenos/ConsultaDueno" asp-route-duenoId="@mascota.Dueno">Ir a Dueño</a></td>
+        <td><a class = "btn btn-primary table-btn" asp-page="/Veterinarios/ConsultaVeterinario" asp-route-veterinarioId="@mascota.Veterinario">Ir a Veterinario</a></td>
+        <td><a class = "btn btn-primary table-btn" asp-page="/Historias/ConsultaHistoria" asp-route-historiaId="@mascota.Historia">Ir a Historia</a></td>
+
+        <!--
+        <td>@mascota.Dueno</td>        
+        <td>@mascota.Veterinario</td>
+        <td>@mascota.Historia</td>
+        -->
+
+        <td>
+            <a class = "btn btn-primary table-btn" asp-page="./ConsultaMascota" asp-route-mascotaId="@mascota.Id">Ir a Mascota</a>
+            <a class = "btn btn-primary table-btn" asp-page="./ModificaMascota" asp-route-mascotaId="@mascota.Id">Modificar Mascota</a>
+        </td>
+    </tr>
+    }
+
+</table>

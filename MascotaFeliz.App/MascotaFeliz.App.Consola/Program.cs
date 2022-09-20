@@ -17,7 +17,7 @@ namespace MascotaFeliz.App.Consola
 
             //AddDueno();
             //AddVeterinario();
-            //AddMascota();
+            AddMascota();
             //BuscarDueno(1);
             //BuscarVeterinario(4);
             //BuscarMascota(1);
@@ -32,7 +32,7 @@ namespace MascotaFeliz.App.Consola
             //EliminarMascota(2);
             //ActualizarDueno(1);
             //ActualizarVeterinario(5);
-            ActualizarMascota(3);
+            //ActualizarMascota(3);
 
         }
 
@@ -72,6 +72,7 @@ namespace MascotaFeliz.App.Consola
         Color = "Verde",
         Especie = "Dino",
         Raza = "Criollo"
+        //Dueno = 1
         };
     _repoMascota.AddMascota(mascota);
     }
