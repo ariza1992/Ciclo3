@@ -10,6 +10,7 @@ namespace MascotaFeliz.App.Consola
         private static IRepositorioDueno _repoDueno = new RepositorioDueno(new Persistencia.AppContext());
         private static IRepositorioVeterinario _repoVeterinario = new RepositorioVeterinario (new Persistencia.AppContext());
         private static IRepositorioMascota _repoMascota = new RepositorioMascota (new Persistencia.AppContext());
+        private static IRepositorioHistoria _repoHistoria = new RepositorioHistoria (new Persistencia.AppContext());
 
         static void Main(string[] args)
         {
@@ -34,7 +35,13 @@ namespace MascotaFeliz.App.Consola
             //ActualizarVeterinario(5);
             //ActualizarMascota(3);
             //AsignarVeterinario();
-            AsignarDueno();
+            //AsignarDueno();
+            //AddHistoria();
+            //BuscarHistoria (3);
+            //ListarHistorias();
+            //EliminarHistoria (2);
+            //ActualizarHistoria(1);
+            AsignarHistoria();
 
         }
 
@@ -79,6 +86,16 @@ namespace MascotaFeliz.App.Consola
     _repoMascota.AddMascota(mascota);
     }
 
+    private static void AddHistoria()
+    {
+        var historia = new Historia 
+        {
+        //FechaInicial = DateTime.Today,
+        FechaInicial = DateTime.Now,
+        };
+    _repoHistoria.AddHistoria(historia);
+    }
+
     //---------------------------------------BUSCAR------------------------------------
 
     private static void BuscarDueno (int idDueno)
@@ -99,6 +116,12 @@ namespace MascotaFeliz.App.Consola
     {
         var mascota = _repoMascota.GetMascota(idMascota);
         Console.WriteLine (mascota.Nombre + " / " + mascota.Color + " / " + mascota.Especie + " / " + mascota.Raza + " / " + mascota.Dueno + " / " + mascota.Veterinario);
+    }
+
+    private static void BuscarHistoria (int idHistoria)
+    {
+        var historia = _repoHistoria.GetHistoria(idHistoria);
+        Console.WriteLine (historia.Id + " / " + historia.FechaInicial);
     }
 
     //-------------------------------------LISTAR-------------------------------------
@@ -127,6 +150,15 @@ namespace MascotaFeliz.App.Consola
         foreach (Mascota d in mascotas)
         {
             Console.WriteLine (d.Id + " " + d.Nombre + " " + d.Color);
+        }
+    }
+
+    private static void ListarHistorias()
+    {
+        var historias = _repoHistoria.GetAllHistorias();
+        foreach (Historia d in historias)
+        {
+            Console.WriteLine (d.Id + " " + d.FechaInicial);
         }
     }
 
@@ -179,6 +211,13 @@ namespace MascotaFeliz.App.Consola
         Console.WriteLine ("Se elimino la mascota con Id: " + idMascota);
     }
 
+    private static void EliminarHistoria (int idHistoria)
+    {
+        _repoHistoria.DeleteHistoria(idHistoria);
+        Console.WriteLine ("Se elimino la historia con Id: " + idHistoria);
+    }
+
+
     //-----------------------------------ACTUALIZAR-----------------------------------
 
     private static void ActualizarDueno(int idDueno)
@@ -225,6 +264,17 @@ namespace MascotaFeliz.App.Consola
             Console.WriteLine ("Se actualizo la mascota con Id: " + idMascota);
     }
 
+    private static void ActualizarHistoria(int idHistoria)
+        {
+            var historia = new Historia 
+            {
+                Id = idHistoria,
+                FechaInicial = DateTime.Now,
+            };
+            _repoHistoria.UpdateHistoria(historia);
+            Console.WriteLine ("Se actualizo la historia con Id: " + idHistoria);
+    }
+
     //--------------------------------ASIGNAR---------------------------------------
 
     private static void AsignarVeterinario()
@@ -235,8 +285,14 @@ namespace MascotaFeliz.App.Consola
 
     private static void AsignarDueno()
     {
-        var veterinario = _repoMascota.AsignarDueno (1,3);
-        Console.WriteLine(veterinario.Nombres + " " + veterinario.Apellidos);
+        var dueno = _repoMascota.AsignarDueno (1,3);
+        Console.WriteLine(dueno.Nombres + " " + dueno.Apellidos);
+    }
+
+    private static void AsignarHistoria()
+    {
+        var historia = _repoMascota.AsignarHistoria (1,3);
+        Console.WriteLine(historia.Id + " " + historia.FechaInicial);
     }
 
     /*

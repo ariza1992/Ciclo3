@@ -113,7 +113,7 @@ namespace MascotaFeliz.App.Persistencia
             return null;
         }
 
-        /*
+        
         public Historia AsignarHistoria (int idMascota, int idHistoria)
         {
             var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m=> m.Id == idMascota);
@@ -129,7 +129,7 @@ namespace MascotaFeliz.App.Persistencia
             }
             return null;
         }
-        */
+        
 
 
 
