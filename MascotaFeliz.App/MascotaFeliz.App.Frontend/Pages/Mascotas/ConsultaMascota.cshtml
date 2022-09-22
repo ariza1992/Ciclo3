@@ -10,8 +10,8 @@
 <div>Color: @Model.mascota.Color</div>
 <div>Especie: @Model.mascota.Especie</div>
 <div>Raza: @Model.mascota.Raza</div>
-<div>Dueno: @Model.mascota.Dueno</div>
-<div>Veterinario: @Model.mascota.Veterinario</div>
-<div>Historia: @Model.mascota.Historia</div>
+<div>Dueño: <a asp-page="/Duenos/ConsultaDueno" asp-route-duenoId="@Model.mascota.Dueno.Id">@Model.mascota.Dueno.Nombres @Model.mascota.Dueno.Apellidos</a></div>
+<div>Veterinario: <a asp-page="/Veterinarios/ConsultaVeterinario" asp-route-veterinarioId="@Model.mascota.Veterinario.Id">@Model.mascota.Veterinario.Nombres @Model.mascota.Veterinario.Apellidos</a></div>
+<div>Historia: <a asp-page="/Historias/ConsultaHistoria" asp-route-historiaId="@Model.mascota.Historia.Id">@Model.mascota.Historia.Id</a></div>
 
 <a asp-page="./ListaMascotas" class = "btn-default">Ir a lista de Mascotas</a>

@@ -59,12 +59,13 @@ namespace MascotaFeliz.App.Persistencia
 
         public IEnumerable<Mascota> GetAllMascotas_()
         {
-            return _appContext.Mascotas;
+            return _appContext.Mascotas.Include("Dueno").Include("Veterinario").Include("Historia");
         }
 
         public Mascota GetMascota(int idMascota)
         {
-            return _appContext.Mascotas.FirstOrDefault(d => d.Id == idMascota);
+            //return _appContext.Mascotas.Include("Dueno").Include("Veterinario").Include("Historia").FirstOrDefault(d => d.Id == idMascota);
+            return _appContext.Mascotas.Include(a => a.Dueno).Include(a => a.Veterinario).Include(a => a.Historia).FirstOrDefault(d => d.Id == idMascota);
         }
 
         public Mascota UpdateMascota(Mascota mascota)
@@ -76,6 +77,9 @@ namespace MascotaFeliz.App.Persistencia
                 mascotaEncontrada.Color = mascota.Color;
                 mascotaEncontrada.Especie = mascota.Especie;
                 mascotaEncontrada.Raza = mascota.Raza;
+                mascotaEncontrada.Dueno = mascota.Dueno;
+                mascotaEncontrada.Veterinario = mascota.Veterinario;
+                mascotaEncontrada.Historia = mascota.Historia;
                 _appContext.SaveChanges();
             }
             return mascotaEncontrada;
@@ -130,7 +134,6 @@ namespace MascotaFeliz.App.Persistencia
             return null;
         }
         
-
 
 
         /*

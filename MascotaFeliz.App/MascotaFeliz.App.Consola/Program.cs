@@ -25,7 +25,7 @@ namespace MascotaFeliz.App.Consola
 
             //BuscarDueno(1);
             //BuscarVeterinario(4);
-            //BuscarMascota(1);
+            //BuscarMascota(5);
             //BuscarHistoria (3);
             //BuscarVisitaPyP (1);
 
@@ -41,20 +41,20 @@ namespace MascotaFeliz.App.Consola
             
             //EliminarDueno(8);
             //EliminarVeterinario(4);
-            //EliminarMascota(2);
+            //EliminarMascota(4);
             //EliminarHistoria (2);
             //EliminarVisitaPyP (3);
 
             //ActualizarDueno(1);
             //ActualizarVeterinario(5);
-            //ActualizarMascota(3);
+            //ActualizarMascota(4);
             //ActualizarHistoria(1);
             //ActualizarVisitaPyP(5);
 
             //AsignarVeterinario();
             //AsignarDueno();
             //AsignarHistoria();
-            AsignarVisitaPyP(2);
+            //AsignarVisitaPyP(2);
             
         }
 
@@ -144,7 +144,7 @@ namespace MascotaFeliz.App.Consola
     private static void BuscarMascota (int idMascota)
     {
         var mascota = _repoMascota.GetMascota(idMascota);
-        Console.WriteLine (mascota.Nombre + " / " + mascota.Color + " / " + mascota.Especie + " / " + mascota.Raza + " / " + mascota.Dueno + " / " + mascota.Veterinario);
+        Console.WriteLine (mascota.Nombre + " / " + mascota.Color + " / " + mascota.Especie + " / " + mascota.Raza + " / " + mascota.Dueno + " / " + mascota.Veterinario + " / " + mascota.Historia);
     }
 
     private static void BuscarHistoria (int idHistoria)
@@ -308,7 +308,10 @@ namespace MascotaFeliz.App.Consola
                 Nombre = "TRex",
                 Color = "Azul",
                 Especie = "Dinosaurio",
-                Raza = "Criollo"
+                Raza = "Criollo",
+                /*Dueno = 3,
+                Veterinario = 7,
+                Historia = 1*/
             };
             _repoMascota.UpdateMascota(mascota);
             Console.WriteLine ("Se actualizo la mascota con Id: " + idMascota);
@@ -347,19 +350,19 @@ namespace MascotaFeliz.App.Consola
 
     private static void AsignarVeterinario()
     {
-        var veterinario = _repoMascota.AsignarVeterinario (1,7);
+        var veterinario = _repoMascota.AsignarVeterinario (4,5);
         Console.WriteLine(veterinario.Nombres + " " + veterinario.Apellidos);
     }
 
     private static void AsignarDueno()
     {
-        var dueno = _repoMascota.AsignarDueno (1,3);
+        var dueno = _repoMascota.AsignarDueno (5,9);
         Console.WriteLine(dueno.Nombres + " " + dueno.Apellidos);
     }
 
     private static void AsignarHistoria()
     {
-        var historia = _repoMascota.AsignarHistoria (1,3);
+        var historia = _repoMascota.AsignarHistoria (4,1);
         Console.WriteLine(historia.Id + " " + historia.FechaInicial);
     }
 

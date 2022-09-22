@@ -21,6 +21,7 @@ namespace MascotaFeliz.App.Frontend.Pages
         public IActionResult OnGet(int mascotaId)
         {
             mascota = _repoMascota.GetMascota(mascotaId);
+            
             if (mascota == null)
             {
                 return RedirectToPage ("./NotFound");
