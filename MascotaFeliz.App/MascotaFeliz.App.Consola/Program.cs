@@ -11,6 +11,7 @@ namespace MascotaFeliz.App.Consola
         private static IRepositorioVeterinario _repoVeterinario = new RepositorioVeterinario (new Persistencia.AppContext());
         private static IRepositorioMascota _repoMascota = new RepositorioMascota (new Persistencia.AppContext());
         private static IRepositorioHistoria _repoHistoria = new RepositorioHistoria (new Persistencia.AppContext());
+        private static IRepositorioVisitaPyP _repoVisitaPyP = new RepositorioVisitaPyP (new Persistencia.AppContext());
 
         static void Main(string[] args)
         {
@@ -19,30 +20,42 @@ namespace MascotaFeliz.App.Consola
             //AddDueno();
             //AddVeterinario();
             //AddMascota();
+            //AddHistoria();
+            //AddVisitaPyP();
+
             //BuscarDueno(1);
             //BuscarVeterinario(4);
             //BuscarMascota(1);
+            //BuscarHistoria (3);
+            //BuscarVisitaPyP (1);
+
             //ListarDuenos();
             //ListarVeterinarios();
             //ListarMascotas();
+            //ListarHistorias();
+            //ListarVisitasPyP();
+
             //ListarDuenosFiltro();
             //ListarVeterinariosFiltro();
             //ListarMascotasFiltro();
+            
             //EliminarDueno(8);
             //EliminarVeterinario(4);
             //EliminarMascota(2);
+            //EliminarHistoria (2);
+            //EliminarVisitaPyP (3);
+
             //ActualizarDueno(1);
             //ActualizarVeterinario(5);
             //ActualizarMascota(3);
+            //ActualizarHistoria(1);
+            //ActualizarVisitaPyP(5);
+
             //AsignarVeterinario();
             //AsignarDueno();
-            //AddHistoria();
-            //BuscarHistoria (3);
-            //ListarHistorias();
-            //EliminarHistoria (2);
-            //ActualizarHistoria(1);
-            AsignarHistoria();
-
+            //AsignarHistoria();
+            AsignarVisitaPyP(2);
+            
         }
 
         //------------------------------------AGREGAR----------------------------------
@@ -96,6 +109,22 @@ namespace MascotaFeliz.App.Consola
     _repoHistoria.AddHistoria(historia);
     }
 
+    private static void AddVisitaPyP()
+    {
+        var visitaPyP = new VisitaPyP 
+        {
+        FechaVisita = DateTime.Now,
+        Temperatura = 38,
+        Peso = 50,
+        FrecuenciaRespiratoria = 70,
+        FrecuenciaCardiaca = 90,
+        EstadoAnimo = "Feliz",
+        IdVeterinario = 7,
+        Recomendaciones = "Ninguna"
+        };
+    _repoVisitaPyP.AddVisitaPyP(visitaPyP);
+    }
+
     //---------------------------------------BUSCAR------------------------------------
 
     private static void BuscarDueno (int idDueno)
@@ -122,6 +151,12 @@ namespace MascotaFeliz.App.Consola
     {
         var historia = _repoHistoria.GetHistoria(idHistoria);
         Console.WriteLine (historia.Id + " / " + historia.FechaInicial);
+    }
+
+    private static void BuscarVisitaPyP (int idVisitaPyP)
+    {
+        var visitaPyP = _repoVisitaPyP.GetVisitaPyP(idVisitaPyP);
+        Console.WriteLine (visitaPyP.Id + " / " + visitaPyP.FechaVisita);
     }
 
     //-------------------------------------LISTAR-------------------------------------
@@ -159,6 +194,15 @@ namespace MascotaFeliz.App.Consola
         foreach (Historia d in historias)
         {
             Console.WriteLine (d.Id + " " + d.FechaInicial);
+        }
+    }
+
+    private static void ListarVisitasPyP()
+    {
+        var visitasPyP = _repoVisitaPyP.GetAllVisitasPyP();
+        foreach (VisitaPyP d in visitasPyP)
+        {
+            Console.WriteLine (d.Id + " " + d.FechaVisita);
         }
     }
 
@@ -215,6 +259,12 @@ namespace MascotaFeliz.App.Consola
     {
         _repoHistoria.DeleteHistoria(idHistoria);
         Console.WriteLine ("Se elimino la historia con Id: " + idHistoria);
+    }
+
+    private static void EliminarVisitaPyP (int idVisitaPyP)
+    {
+        _repoVisitaPyP.DeleteVisitaPyP(idVisitaPyP);
+        Console.WriteLine ("Se elimino la historia con Id: " + idVisitaPyP);
     }
 
 
@@ -275,6 +325,24 @@ namespace MascotaFeliz.App.Consola
             Console.WriteLine ("Se actualizo la historia con Id: " + idHistoria);
     }
 
+    private static void ActualizarVisitaPyP(int idVisitaPyP)
+        {
+            var visitaPyP = new VisitaPyP 
+            {
+            Id = idVisitaPyP,
+            FechaVisita = DateTime.Now,
+            Temperatura = 39,
+            Peso = 51,
+            FrecuenciaRespiratoria = 71,
+            FrecuenciaCardiaca = 91,
+            EstadoAnimo = "Feliz",
+            IdVeterinario = 5,
+            Recomendaciones = "Ninguna"
+            };
+            _repoVisitaPyP.UpdateVisitaPyP(visitaPyP);
+            Console.WriteLine ("Se actualizo la visitaPyP con Id: " + idVisitaPyP);
+    }
+
     //--------------------------------ASIGNAR---------------------------------------
 
     private static void AsignarVeterinario()
@@ -295,8 +363,7 @@ namespace MascotaFeliz.App.Consola
         Console.WriteLine(historia.Id + " " + historia.FechaInicial);
     }
 
-    /*
-        private static void AsignarVisitaPyP(int idHistoria)
+    private static void AsignarVisitaPyP(int idHistoria)
         {
             var historia = _repoHistoria.GetHistoria(idHistoria);
             if (historia != null)
@@ -305,35 +372,37 @@ namespace MascotaFeliz.App.Consola
                 {
                     historia.VisitasPyP.Add(new VisitaPyP 
                     { 
-                        FechaVisita = new DateTime(2020, 01, 01), 
-                        Temperatura = 38.0F, Peso = 30.0F, 
-                        FrecuenciaRespiratoria = 71.0F, 
-                        FrecuenciaCardiaca = 71.0F, 
-                        EstadoAnimo = "Muy cansón", 
-                        CedulaVeterinario = "123", 
-                        Recomendaciones = "Dieta extrema"
+                    FechaVisita = DateTime.Now,
+                    Temperatura = 38,
+                    Peso = 50,
+                    FrecuenciaRespiratoria = 70,
+                    FrecuenciaCardiaca = 90,
+                    EstadoAnimo = "Feliz",
+                    IdVeterinario = 7,
+                    Recomendaciones = "Ninguna"
                     });
                 }
                 else
                 {
-                    historia.VisitasPyP = new List<VisitaPyP>
+                historia.VisitasPyP = new List<VisitaPyP>
+                {
+                    new VisitaPyP
                     {
-                        new VisitaPyP
-                        {
-                            FechaVisita = new DateTime(2020, 01, 01), 
-                            Temperatura = 38.0F, Peso = 30.0F, 
-                            FrecuenciaRespiratoria = 71.0F, 
-                            FrecuenciaCardiaca = 71.0F, 
-                            EstadoAnimo = "Muy cansón", 
-                            CedulaVeterinario = "123", 
-                            Recomendaciones = "Dieta extrema" 
-                            }
-                    };
+                    FechaVisita = DateTime.Now,
+                    Temperatura = 38,
+                    Peso = 50,
+                    FrecuenciaRespiratoria = 70,
+                    FrecuenciaCardiaca = 90,
+                    EstadoAnimo = "Feliz",
+                    IdVeterinario = 7,
+                    Recomendaciones = "Ninguna"
+                    }
+                };
                 }
                 _repoHistoria.UpdateHistoria(historia);
             }
-        }
-        */
+    }
+        
 
     
 
