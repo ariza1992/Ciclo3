@@ -72,5 +72,17 @@ namespace MascotaFeliz.App.Persistencia
             return visitaPyPEncontrado;
         }
 
+        public IEnumerable<VisitaPyP> GetVisitasPyPPorFiltro(int filtro)
+        {
+            var visitasPyP = GetAllVisitasPyP(); // Obtiene todos los saludos
+            if (visitasPyP != null)  //Si se tienen saludos
+            {
+                
+                visitasPyP = visitasPyP.Where(s => s.HistoriaId.Equals(filtro));
+                
+            }
+            return visitasPyP;
+        }
+
     }
 }

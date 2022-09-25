@@ -38,6 +38,7 @@ namespace MascotaFeliz.App.Consola
             //ListarDuenosFiltro();
             //ListarVeterinariosFiltro();
             //ListarMascotasFiltro();
+            ListarVisitasPyPPorFiltro();
             
             //EliminarDueno(8);
             //EliminarVeterinario(4);
@@ -54,7 +55,7 @@ namespace MascotaFeliz.App.Consola
             //AsignarVeterinario();
             //AsignarDueno();
             //AsignarHistoria();
-            AsignarVisitaPyP(5);
+            //AsignarVisitaPyP(5);
             
         }
 
@@ -234,6 +235,17 @@ namespace MascotaFeliz.App.Consola
             Console.WriteLine (d.Id + " " + d.Nombre + " " + d.Color);
         }
     }
+
+    private static void ListarVisitasPyPPorFiltro()
+    {
+        var visitasPyP = _repoVisitaPyP.GetVisitasPyPPorFiltro(1);
+        foreach (VisitaPyP d in visitasPyP)
+        {
+            Console.WriteLine (d.Id + " " + d.FechaVisita + " " + d.IdVeterinario);
+        }
+    }
+
+
 
     //-------------------------------------ELIMINAR-----------------------------------
 

@@ -12,6 +12,6 @@ namespace MascotaFeliz.App.Dominio
     public string EstadoAnimo{get;set;}
     public int IdVeterinario{get;set;}
     public string Recomendaciones{get;set;}
-    //public Historia Historia{get;set;} //ojo borrar este si no funciona asignar visita a historia
+    public int HistoriaId {get;set;} //ojo borrar este si no funciona asignar visita a historia
    }
 }
