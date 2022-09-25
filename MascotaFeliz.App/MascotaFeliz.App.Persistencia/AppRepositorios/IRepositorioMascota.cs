@@ -17,6 +17,6 @@ namespace MascotaFeliz.App.Persistencia
         Veterinario AsignarVeterinario (int idMascota, int idVeterinario);
         Dueno AsignarDueno (int idMascota, int idDueno);
         Historia AsignarHistoria (int idMascota, int idHistoria);
-        //void AsignarVisitaPyP(int idHistoria)
+        //VisitaPyP AsignarVisitaPyP(int idHistoria, int idVisitaPyP);
     }
 }

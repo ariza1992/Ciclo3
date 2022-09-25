@@ -133,19 +133,37 @@ namespace MascotaFeliz.App.Persistencia
             }
             return null;
         }
+
+
+    /*
+        public VisitaPyP AsignarVisitaPyP (int idVisitaPyP, int idHistoria)
+        {
+            var visitaPyPEncontrado = _appContext.VisitasPyP.FirstOrDefault(v=> v.Id == idVisitaPyP);
+            if (visitaPyPEncontrado != null)
+            {
+                var historiaEncontrado = _appContext.Historias.FirstOrDefault(h=> h.Id == idHistoria);
+                if (historiaEncontrado !=null)
+                {
+                    visitaPyPEncontrado.Historia = historiaEncontrado;
+                    _appContext.SaveChanges();
+                }
+                return historiaEncontrado;
+            }
+            return null;
+        }
+    */
+    
         
-
-
         /*
         public VisitaPyP AsignarVisitaPyP (int idHistoria)
         {
-            var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m=> m.Id == idMascota);
-            if (mascotaEncontrado != null)
+            var historiaEncontrado = _appContext.Historias.FirstOrDefault(m=> m.Id == idHistoria);
+            if (historiaEncontrado != null)
             {
                 var historiaEncontrado = _appContext.Historias.FirstOrDefault(v=> v.Id == idHistoria);
                 if (historiaEncontrado !=null)
                 {
-                    mascotaEncontrado.Historia = historiaEncontrado;
+                    historiaEncontrado.Historia = historiaEncontrado;
                     _appContext.SaveChanges();
                 }
                 return historiaEncontrado;
@@ -153,6 +171,7 @@ namespace MascotaFeliz.App.Persistencia
             return null;
         }
         */
+        
 
     }
 }

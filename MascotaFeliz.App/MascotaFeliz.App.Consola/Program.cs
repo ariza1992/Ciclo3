@@ -54,7 +54,7 @@ namespace MascotaFeliz.App.Consola
             //AsignarVeterinario();
             //AsignarDueno();
             //AsignarHistoria();
-            //AsignarVisitaPyP(2);
+            AsignarVisitaPyP(5);
             
         }
 
@@ -371,10 +371,45 @@ namespace MascotaFeliz.App.Consola
             var historia = _repoHistoria.GetHistoria(idHistoria);
             if (historia != null)
             {
+                          
+                historia.VisitasPyP = new List<VisitaPyP>
+                {
+                    new VisitaPyP
+                    {
+                    FechaVisita = DateTime.Now,
+                    Temperatura = 36,
+                    Peso = 10,
+                    FrecuenciaRespiratoria = 100,
+                    FrecuenciaCardiaca = 110,
+                    EstadoAnimo = "Distraido",
+                    IdVeterinario = 5,
+                    Recomendaciones = "Ninguna"
+                    }
+                };
+                }
+                _repoHistoria.UpdateHistoria(historia);
+            }
+
+
+    /*
+    private static void AsignarVisitaPyP()
+    {
+        var visitaPyP = _repoMascota.AsignarVisitaPyP (1,4);
+        Console.WriteLine(visitaPyP.Id + " " + visitaPyP.FechaVisita);
+    }
+    */
+
+
+    /*
+    private static void AsignarVisitaPyP(int idHistoria)
+        {
+            var historia = _repoHistoria.GetHistoria(idHistoria);
+            if (historia != null)
+            {
                 if (historia.VisitasPyP != null)
                 {
                     historia.VisitasPyP.Add(new VisitaPyP 
-                    { 
+                    {
                     FechaVisita = DateTime.Now,
                     Temperatura = 38,
                     Peso = 50,
@@ -405,7 +440,8 @@ namespace MascotaFeliz.App.Consola
                 _repoHistoria.UpdateHistoria(historia);
             }
     }
-        
+    */
+
 
     
 
