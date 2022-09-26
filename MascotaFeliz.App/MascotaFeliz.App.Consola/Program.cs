@@ -24,7 +24,7 @@ namespace MascotaFeliz.App.Consola
             //AddVisitaPyP();
 
             //BuscarDueno(1);
-            //BuscarVeterinario(4);
+            BuscarVeterinario(7);
             //BuscarMascota(5);
             //BuscarHistoria (3);
             //BuscarVisitaPyP (1);
@@ -38,7 +38,7 @@ namespace MascotaFeliz.App.Consola
             //ListarDuenosFiltro();
             //ListarVeterinariosFiltro();
             //ListarMascotasFiltro();
-            ListarVisitasPyPPorFiltro();
+            //ListarVisitasPyPPorFiltro();
             
             //EliminarDueno(8);
             //EliminarVeterinario(4);

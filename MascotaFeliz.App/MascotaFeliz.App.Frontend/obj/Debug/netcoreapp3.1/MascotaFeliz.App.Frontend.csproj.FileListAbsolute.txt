@@ -89,3 +89,5 @@ C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\Mascota
 C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\ConsultaMascota.cshtml.g.cs
 C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\ModificaMascota.cshtml.g.cs
 C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Historias\ConsultaHistoria.cshtml.g.cs
+C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Visitas\ConsultaVisita.cshtml.g.cs
+C:\Users\Ariza\Desktop\UTP\Ciclo 3\Fundamentos de Programación\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Visitas\ModificaVisita.cshtml.g.cs

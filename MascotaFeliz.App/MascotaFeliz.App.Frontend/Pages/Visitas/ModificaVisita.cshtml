@@ -1,0 +1,49 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ModificaVisitaModel
+@{
+}
+
+<h1>@Model.pageName</h1>
+
+<form method="post" >
+    <div class="form-group">
+        <input type="hidden" asp-for = "visitaPyP.Id" />
+        <label asp-for="visitaPyP.FechaVisita"></label>
+        <input asp-for="visitaPyP.FechaVisita" class="form-control">
+        <label asp-for="visitaPyP.Temperatura"></label>
+        <input asp-for="visitaPyP.Temperatura" class="form-control">
+        <label asp-for="visitaPyP.Peso"></label>
+        <input asp-for="visitaPyP.Peso" class="form-control">
+        <label asp-for="visitaPyP.FrecuenciaRespiratoria"></label>
+        <input asp-for="visitaPyP.FrecuenciaRespiratoria" class="form-control">
+        <label asp-for="visitaPyP.FrecuenciaCardiaca"></label>
+        <input asp-for="visitaPyP.FrecuenciaCardiaca" class="form-control">
+        <label asp-for="visitaPyP.EstadoAnimo"></label>
+        <input asp-for="visitaPyP.EstadoAnimo" class="form-control">
+        <label asp-for="visitaPyP.Recomendaciones"></label>
+        <input asp-for="visitaPyP.Recomendaciones" class="form-control">
+
+        <label for="historia">Historia</label>
+        <select id="historia" asp-for="visitaPyP.HistoriaId" name ="historiaId">
+            <option value ="0">Seleccione una Historia</option>
+            @foreach (var historia in Model.listaHistorias)
+            {
+                <option value = "@historia.Id">@historia.Id</option>
+            }
+        </select>
+
+        <label for="veterinario">Veterinario</label>
+        <select id="veterinario" asp-for="visitaPyP.IdVeterinario" name ="veterinarioId">
+            <option value ="0">Seleccione un Veterinario</option>
+            @foreach (var veterinario in Model.listaVeterinarios)
+            {
+                <option value = "@veterinario.Id">@veterinario.Nombres @veterinario.Apellidos</option>
+            }
+        </select>
+
+        <button type="submit" class="btn btn-primary">Grabar</button>
+    </div>
+
+</form>
+
+<a asp-page="./ListaMascotas" class="btn-default">Lista de Mascotas</a>
